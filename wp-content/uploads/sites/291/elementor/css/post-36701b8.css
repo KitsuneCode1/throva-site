@@ -1,5 +1,28 @@
 .elementor-367 .elementor-element.elementor-element-49bab23{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;--overlay-opacity:1;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:200px;--padding-bottom:120px;--padding-left:0px;--padding-right:0px;}
-
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-content .hero-box{
+    width: 42%;
+}
+.span-title{
+    align-items: center;
+}
+.span-title h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.span-title p{
+    margin-bottom: 1rem;
+}
+.hero-content .span-media{
+    width: 50%;
+}
+.span-media img{
+    border-radius: 10px;
+}
 .img img{
     height: 100%;
 }

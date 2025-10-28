@@ -9,6 +9,17 @@
     --background-overlay:'';
     background-image: radial-gradient(at top right, var(--e-global-color-8f3cb5c) 0%, var(--e-global-color-primary) 100%);
 }
+/* Throva Engine Hero Section Starts */
+.container .hero-section .span-title{
+    text-align: center;
+}
+.container .hero-section .span-title h2{
+    font-size: 3rem;
+}
+.container .hero-section .span-title p{
+    font-size: 1rem;
+}
+/* Throva Enigne Hero Section Ends */
 .hero-content{
     display: flex;
     justify-content: space-between;
