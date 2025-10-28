@@ -78,6 +78,70 @@
 .box-text p{
     font-style: italic;
 }
+
+.container .tryp-content{
+    display: grid;
+    gap: 10em;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+.container .tryp-content .row{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.container .tryp-content .row .col{
+    width: 45%;
+}
+.container .tryp-content .row .col h2{
+    font-size: 2.7rem;
+}
+.container .tryp-content .row .col p{
+    font-size: 1.25rem;
+}
+.container .tryp-content .row .img-col{
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+.container .tryp-content .row .img-col img{
+    border-radius: 10px;
+}
+
+.container .tryp-content .row .col ul{
+    font-size: 1.1rem;
+    color: white;
+    padding: 10px 50px;
+}
+.container .tryp-content .row .col ul li{
+    padding: 10px;
+}
+.tryp-cta{
+    background: linear-gradient(196deg, #02052a 26.47%, #040509 46.33%);
+}
+.tryp-cta .container{
+    display: grid;
+    gap: 5em;
+    padding-bottom: 0;
+}
+.tryp-cta .span-content{
+    text-align: center;
+}
+.tryp-cta .span-content h2{
+    font-size: 3rem;
+}
+.tryp-cta .span-media .image{
+    max-height: 640px;
+    overflow: hidden;
+}
+.tryp-cta .span-media .image img{
+    height: 100%;
+}
+#tryp-btn{
+    font-size: 1.5rem;
+}
+
 .elementor-367 .elementor-element.elementor-element-49bab23:not(.elementor-motion-effects-element-type-background), .elementor-367 .elementor-element.elementor-element-49bab23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
     background-color:var( --e-global-color-primary );
     background-image:url("../../2024/11/Dark-Blue-Texture-Background-10.jpg");
@@ -167,5 +231,89 @@
     .box-text h2{
         font-size: 2.35rem;
         margin-bottom: .5rem;
+    }
+
+    /* Tryp Page Styling */
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
+    }
+    .hero-content .hero-box{
+        width: 100%;
+    }
+    .span-title{
+        align-items: center;
+    }
+    .span-title h2{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .span-title p{
+        margin-bottom: 1rem;
+    }
+    .hero-content .span-media{
+        width: 100%;
+    }
+    .container .tryp-content .row .col{
+        width: 100%;
+    }
+    .container .tryp-content .row .img-col{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .container .tryp-content{
+        gap: 6em;
+    }
+    .container .tryp-content .row{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+    .container .tryp-content .row .col h2{
+        font-size: 2.5rem;
+    }
+    .container .tryp-content .row .col p{
+        font-size: 1.1rem;
+    }
+    .container .tryp-content .row .img-col img{
+        border-radius: 10px;
+    }
+    .container .tryp-content .row .col ul{
+        font-size: 1rem;
+        color: white;
+        padding: 2% 0;
+        padding-left: 10%;
+    }
+    .container .tryp-content .row .col ul li{
+        padding: 3% 0;
+    }
+    .container .tryp-content .row-2 .col:nth-child(1){
+        order: 1;
+    }
+    #tryp-btn{
+        font-size: 1rem;
+    }
+    .tryp-cta .container{
+        display: grid;
+        gap: 4em;
+        padding-top: 10%;
+        padding-bottom: 0;
+    }
+    .tryp-cta .span-content{
+        text-align: center;
+    }
+    .tryp-cta .span-content h2{
+        font-size: 2rem;
+    }
+    .tryp-cta .span-media .image{
+        max-height: 230px;
+        overflow: hidden;
+    }
+    .tryp-cta .span-media .image img{
+        height: auto;
     }
 }
