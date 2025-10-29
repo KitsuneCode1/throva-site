@@ -139,7 +139,10 @@
     height: 100%;
 }
 #tryp-btn{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+.material-symbols-outlined{
+    font-size: 2.5rem;
 }
 
 .elementor-367 .elementor-element.elementor-element-49bab23:not(.elementor-motion-effects-element-type-background), .elementor-367 .elementor-element.elementor-element-49bab23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
@@ -283,7 +286,7 @@
         border-radius: 10px;
     }
     .container .tryp-content .row .col ul{
-        font-size: 1rem;
+        font-size: .95rem;
         color: white;
         padding: 2% 0;
         padding-left: 10%;
@@ -308,6 +311,9 @@
     }
     .tryp-cta .span-content h2{
         font-size: 2rem;
+    }
+    .tryp-cta .span-content p{
+        margin-bottom: 5%;
     }
     .tryp-cta .span-media .image{
         max-height: 230px;
