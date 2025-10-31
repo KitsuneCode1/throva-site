@@ -160,14 +160,11 @@
     font-size: 1.2rem;
 }
 #throva-v2-box-1{
-    margin-top: 2rem;
+    margin-top: 3.5rem;
 }
 #throva-v2-box{
     margin-top: 1rem;
     text-transform: none;
-}
-#throva-v2-box-1 h3{
-    margin-bottom: 0;
 }
 .elementor-367 .elementor-element.elementor-element-49bab23:not(.elementor-motion-effects-element-type-background), .elementor-367 .elementor-element.elementor-element-49bab23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
     background-color:var( --e-global-color-primary );
