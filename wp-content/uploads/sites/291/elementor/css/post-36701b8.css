@@ -141,7 +141,34 @@
 .tryp-cta .span-media .image img{
     height: 100%;
 }
-
+.throva-v2-cta{
+    background: linear-gradient(196deg, #02052a 26.47%, #040509 46.33%);
+}
+.throva-v2-cta .container{
+    display: grid;
+    gap: 5em;
+    padding-top: 5em;
+    padding-bottom: 15em;
+}
+.throva-v2-cta .span-content{
+    text-align: center;
+}
+.throva-v2-cta .span-content h2{
+    font-size: 3rem;
+}
+#throva-v2-btn{
+    font-size: 1.2rem;
+}
+#throva-v2-box-1{
+    margin-top: 2rem;
+}
+#throva-v2-box{
+    margin-top: 1rem;
+    text-transform: none;
+}
+#throva-v2-box-1 h3{
+    margin-bottom: 0;
+}
 .elementor-367 .elementor-element.elementor-element-49bab23:not(.elementor-motion-effects-element-type-background), .elementor-367 .elementor-element.elementor-element-49bab23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
     background-color:var( --e-global-color-primary );
     background-image:url("../../2024/11/Dark-Blue-Texture-Background-10.jpg");
@@ -318,5 +345,15 @@
     }
     .tryp-cta .span-media .image img{
         height: auto;
+    }
+
+    .throva-v2-cta .container{
+        display: grid;
+        gap: 5em;
+        padding-top: 3em;
+        padding-bottom: 7em;
+    }
+    .throva-v2-cta .span-content h2{
+        font-size: 2.5rem;
     }
 }
