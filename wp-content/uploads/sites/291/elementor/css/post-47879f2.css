@@ -367,6 +367,7 @@
 .subtext{
     text-align: center;
     padding: 2rem 15rem 0;
+    font-size: 1.3rem;
 }
 
 @media (max-width: 767px){
