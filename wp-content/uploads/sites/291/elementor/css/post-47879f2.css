@@ -216,25 +216,25 @@
     background-size: 120%;
 }
 .ai-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/ai.jpg);
+    background-image: url("../../2024/11/ai.jpg");
 }
 .gold-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/gold.jpg);
+    background-image: url("../../2024/11/gold.jpg");
 }
 .farm-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/farm.jpg);
+    background-image: url("../../2024/11/farm.jpg");
 }
 .asset-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/asset.jpg);
+    background-image: url("../../2024/11/asset.jpg");
 }
 .equities-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/equity.png);
+    background-image: url("../../2024/11/equity.png");
 }
 .oil-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/image-2.jpg);
+    background-image: url("../../2024/11/image-2.jpg");
 }
 .wine-card{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/image-3.jpg);
+    background-image: url("../../2024/11/image-3.jpg");
 }
 .card .card-img:hover{
     background-size: 130%;
