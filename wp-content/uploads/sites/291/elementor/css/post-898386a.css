@@ -305,6 +305,9 @@ font-size:1.2em;font-weight:200;
     margin-top: 1rem;
     text-transform: none;
 }
+#bigger-text{
+    font-size: 1.35rem;
+}
 
 @media (max-width: 767px) {
     .throva-v2-cta .container{
@@ -315,5 +318,8 @@ font-size:1.2em;font-weight:200;
     }
     .throva-v2-cta .span-content h2{
         font-size: 2.5rem;
+    }
+    #bigger-text{
+        font-size: 1rem;
     }
 }
