@@ -210,15 +210,18 @@
     border: 1px solid #ffffff17;
     transition: ease-in-out 0.3s;
 }
-.card:hover{
-    transform: translateY(-10px);
-}
 .card .card-img{
     border-radius: 10px;
     min-height: 280px;
     background-position: center center;
     background-size: 120%;
     transition: ease-in-out 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+    .card-img{
+        background-size: 130%;
+    }
 }
 .ai-card{
     background-image: url("../../2024/11/ai.jpg");
@@ -241,9 +244,9 @@
 .wine-card{
     background-image: url("../../2024/11/Image-3.jpg");
 }
-.card .card-img:hover{
+/* .card .card-img:hover{
     background-size: 130%;
-}
+} */
 .card .card-img img{
     border-radius: 10px;
     height: 100%;
@@ -372,8 +375,11 @@
             background-position: center center;
             background-size: 140%;
         }
-        .card .card-img:hover{
-            background-size: 150%;
+        .card:hover{
+            transform: translateY(-10px);
+            .card-img{
+                background-size: 150%;
+            }
         }
         #sector-section{
             padding-top: 50px;
@@ -566,7 +572,10 @@
         background-position: center center;
         background-size: 130%;
     }
-    .card .card-img:hover{
-        background-size: 140%;
+    .card:hover{
+        transform: translateY(-10px);
+        .card-img{
+            background-size: 140%;
+        }
     }
 }
