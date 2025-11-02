@@ -168,6 +168,10 @@
     flex-direction: row;
     justify-content: space-between;
 }
+#throva-header-text{
+    display: flex;
+    flex-direction: column;
+}
 .hero-box{
     width: 45%;
 }
@@ -194,6 +198,10 @@
 }
 
 @media (max-width: 767px) {
+    #throva-header-text{
+        display: flex;
+        flex-direction: row;
+    }
     #hero-word{
         display: flex;
         align-items: center;
