@@ -166,6 +166,111 @@
     margin-top: 1rem;
     text-transform: none;
 }
+
+/* Plans Section Styling Starts */
+.plans{
+    padding-block: 7.5rem 2rem;
+  }
+
+  .plans .plans-content{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    padding-inline: 1rem;
+    text-align: center;
+    padding-block: 2.5rem;
+    background-image: url(images/left-pattern.png), url(images/right-pattern.png);
+    background-position: left, right 5rem bottom 1rem;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .plans .plans-content .plans-para{
+    font-size: clamp(.9375rem, .875rem + .3125vw, 1.25rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+    max-width: 80ch;
+    margin-top: 2rem;
+    margin-inline: auto;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .table-wrapper{
+    margin-top: 5px;
+    max-width: 70rem;
+    border: 2px solid #2F3B52;
+    border-radius: .5rem;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: center;
+    
+  }
+
+  .table{
+    width: 100%;
+    vertical-align: top;
+    caption-side: bottom;
+    border-collapse: collapse;
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+
+  .table-wrapper thead{
+    font-size: clamp(.8125rem, .775rem + .1875vw, 1rem);
+    text-align: center;
+    color: #fafafa;
+  }
+
+  .table>thead {
+    vertical-align: bottom;
+  }
+
+  .table-wrapper thead tr th{
+    font-size: clamp(1rem, .975rem + .125vw, 1.125rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .table-wrapper tbody{
+    font-size: 1.25rem;
+    border-top: 1px solid #6991dd;
+    vertical-align: middle;
+  }
+
+  .table-wrapper tbody tr{
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .table-wrapper tbody tr th{
+    font-size: clamp(1rem, .975rem + .125vw, 1.125rem);
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+    white-space: nowrap;
+  }
+
+  .table-wrapper tbody tr td{
+    font-weight: 400;
+  }
+
+  /* .commissions-referral-para{
+    margin: 0;
+    max-width: 50rem;
+    letter-spacing: .8px;
+    font-weight: 400;
+    font-size: clamp(.875rem, .85rem + .125vw, 1rem);
+    margin-inline: auto;
+    line-height: 1.8;
+    color: #3f3f3f;
+  } */
+
+  /* Commissions Section Styling Ends */
 .elementor-367 .elementor-element.elementor-element-49bab23:not(.elementor-motion-effects-element-type-background), .elementor-367 .elementor-element.elementor-element-49bab23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
     background-color:var( --e-global-color-primary );
     background-image:url("../../2024/11/Dark-Blue-Texture-Background-10.jpg");
@@ -331,7 +436,7 @@
         text-align: center;
     }
     .tryp-cta .span-content h2{
-        font-size: 2.7rem;
+        font-size: 2.5rem;
     }
     .tryp-cta .span-content p{
         margin-bottom: 5%;
@@ -347,10 +452,22 @@
     .throva-v2-cta .container{
         display: grid;
         gap: 5em;
+        padding-left: 0;
+        padding-right: 0;
         padding-top: 3em;
         padding-bottom: 7em;
     }
     .throva-v2-cta .span-content h2{
         font-size: 2.5rem;
     }
+    .plans{
+        padding-block: 2rem 2rem;
+    }
+    .plans .plans-content{
+        padding-block-start: 1rem;
+    }
+    .table-wrapper tbody{
+        font-size: 1rem;
+    }
+    
 }
