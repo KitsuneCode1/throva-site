@@ -193,6 +193,36 @@
     font-size: 1.3rem;
 }
 
+.container{
+    padding: 3%;
+    width: 100%;
+}
+.container .sector-content{
+    display: grid;
+    gap: 1em;
+    margin-bottom: 10%;
+}
+.container .sector-content .row{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.container .sector-content .row .col{
+    width: 45%;
+}
+.container .sector-content .row .col h2{
+    font-size: 2.5rem;
+}
+.container .sector-content .row .img-col{
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+.container .sector-content .row .img-col img{
+    border-radius: 10px;
+}
+
 #card-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -363,7 +393,7 @@
             font-size: 1.8rem;
         }
         #bigger-text{
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         #card-container{
             display: grid;
@@ -425,6 +455,7 @@
         .throva-v2-cta .container{
             display: grid;
             gap: 5em;
+            margin-top: 5rem;
             padding-top: 3em;
             padding-bottom: 7em;
         }
@@ -439,12 +470,45 @@
         }
         .throva-v2-cta .container{
             display: grid;
-            gap: 5em;
+            gap: 3em;
             padding-top: 3em;
             padding-bottom: 7em;
         }
         .throva-v2-cta .span-content h2{
             font-size: 2.5rem;
+        }
+
+        .container{
+            padding-top: 0;
+            padding: 5%;
+            width: 100%;
+        }
+        .container .sector-content .row .col{
+            width: 100%;
+        }
+        .container .sector-content .row .img-col{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .container .sector-content{
+            gap: 1em;
+        }
+        .container .sector-content .row{
+            display: flex;
+            flex-direction: column;
+            gap: 5em;
+        }
+        .container .sector-content .row .col h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .container .sector-content .row .img-col img{
+            border-radius: 10px;
+        }
+
+        .container .sector-content .row-2 .col:nth-child(1){
+            order: 1;
         }
 
         .elementor-478 .elementor-element.elementor-element-1416053{
