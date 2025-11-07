@@ -212,7 +212,7 @@
     width: 45%;
 }
 .container .sector-content .row .col h2{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 .container .sector-content .row .img-col{
     width: 45%;
@@ -393,7 +393,7 @@
             font-size: 1.8rem;
         }
         #bigger-text{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         #card-container{
             display: grid;
@@ -501,7 +501,7 @@
         }
         .container .sector-content .row .col h2{
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .container .sector-content .row .img-col img{
             border-radius: 10px;
