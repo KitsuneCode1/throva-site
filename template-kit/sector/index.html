@@ -7,11 +7,83 @@
 	<link rel="pingback" href="../../xmlrpc.php" />
 	<title>Our Sectors</title>
 	<link rel="shortcut icon" href="../../wp-content/uploads/sites/291/2024/11/favicon.ico" type="image/x-icon">
-<meta name='robots' content='max-image-preview:large' />
+	<meta name='robots' content='max-image-preview:large' />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+	<style>
+		:root{
+		--bg: #0f1724; /* dark background to match modern fintech */
+		--card: #0b1220;
+		--muted: #94a3b8;
+		--accent: #ef4444; /* throva red-ish accent */
+		}
+		body{
+			font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+			margin:0; 
+			background:transparent
+		}
+		.sector-graph-card{
+			background:var(--card); 
+			color:#e6eef8; 
+			padding:20px; 
+			border-radius:12px; 
+			box-shadow:0 6px 20px rgba(2,6,23,0.6); 
+			max-width:1200px; 
+			margin:18px auto}
+		h2{
+			margin:0 0 12px 0; 
+			font-size:20px
+		}
+		p.subtitle{
+			margin:0 0 18px 0; 
+			color:var(--muted); 
+			font-size:13px
+		}
+		.chart-wrap{
+			position:relative; 
+			height:380px
+		}
+		.legend-row{
+			display:flex; 
+			gap:12px; 
+			align-items:center; 
+			margin-top:10px
+		}
+		.legend-item{
+			display:flex; 
+			gap:8px; 
+			align-items:center; 
+			font-size:13px; 
+			color:var(--muted)
+		}
+		.swatch{
+			width:12px; 
+			height:12px; 
+			border-radius:3px
+		}
+
+		/* ===== Responsive Mobile View ===== */
+		@media (max-width:768px){
+		.sector-graph-card{padding:16px;margin:12px;border-radius:10px}
+		h2{font-size:18px;text-align:center}
+		p.subtitle{text-align:center;font-size:12px;margin-bottom:14px}
+		.chart-wrap{height:300px}
+		.legend-row{justify-content:center;gap:8px;margin-top:8px}
+		.legend-item{font-size:12px}
+		}
+
+
+		@media (max-width:480px){
+		.sector-graph-card{padding:14px;margin:10px}
+		h2{font-size:16px}
+		p.subtitle{font-size:11px}
+		.chart-wrap{height:260px}
+		.legend-row{flex-direction:column;align-items:flex-start;gap:6px;margin-left:8px}
+		}
+	</style>
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="../../comments/feed/index.html" />
-<script>
+	<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="../../comments/feed/index.html" />
+	<script>
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/kitpro.site\/investure\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.4"}};
 /*! This file is auto-generated */
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
@@ -271,6 +343,16 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 						</div>
 					</div>
 				</div>
+
+				 <div class="sector-graph-card" id="sector-focus-graph">
+					<h2 style="text-align: center;">SECTOR PERFORMANCE RECAP</h2>
+					<p class="subtitle" style="text-align: center;">Sector Performance Score.</p>
+
+					<div class="chart-wrap">
+					<canvas id="sectorChart" role="img" aria-label="Bar and line chart showing sector allocations and 12 month returns"></canvas>
+					</div>
+				</div>
+
 		<div class="elementor-element elementor-element-f05954b e-flex e-con-boxed e-con e-parent" data-id="f05954b" data-element_type="container">
 			<div class="e-con-inner" id="sector-section">
 				<div class="elementor-element elementor-element-c48246b e-flex e-con-boxed e-con e-child" data-id="c48246b" data-element_type="container">
@@ -803,5 +885,78 @@ var GutenverseFormValidationData = {"data":[],"missingLabel":"Form action is mis
 var ekit_config = {"ajaxurl":"https:\/\/kitpro.site\/investure\/wp-admin\/admin-ajax.php","nonce":"283d269f69"};
 </script>
 <script src="../../wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor6b00.js?ver=3.4.0" id="elementskit-elementor-js"></script>
+
+ <script>
+    // Sample data — replace with dynamic values from your backend or CMS
+    const sectors = ['Gold','Oil & Gas','AI','Equities','Smart Farms','Wine','Asset Recovery'];
+    const allocation = [22, 25, 23, 21, 21, 20, 27]; // percent allocation
+    const returns12m = [6.5, 28.4, 9.2, 4.1, -3.8, 14.7, 11.0]; // 12-month returns in percent
+
+    const ctx = document.getElementById('sectorChart').getContext('2d');
+
+    // Create a combined bar (allocation) + line (returns) chart
+    const sectorChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: sectors,
+        datasets: [
+          {
+            type: 'bar',
+            label: 'Cumulative Performance Score',
+            data: allocation,
+            borderRadius:4.5,
+            barThickness: 80,
+            backgroundColor: '#3b82f6',
+            yAxisID: 'y',
+            hoverOffset: 6
+          },
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+            callbacks: {
+              label: function(context) {
+                const label = context.dataset.label || '';
+                if (context.dataset.type === 'bar') return label + ': ' + context.parsed.y + '%';
+                return label + ': ' + context.parsed.y + '%';
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { color: '#cbd5e1' }
+          },
+          y: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Cumulative Performance Score (Max = 30)', color: '#94a3b8' },
+            ticks: { color: '#94a3b8', callback: value => value },
+            beginAtZero: true,
+            suggestedMax: 30
+          },
+        }
+      }
+    });
+
+    // Optional: resize canvas to improve clarity on smaller screens
+    function adjustCanvasHeight(){
+      const wrap = document.querySelector('.chart-wrap');
+      if(window.innerWidth<480) wrap.style.height='260px';
+	  else if(window.innerWidth<768) wrap.style.height='300px';
+      else if(window.innerWidth < 900) wrap.style.height = '340px';
+      else wrap.style.height = '380px';
+    }
+    window.addEventListener('resize', adjustCanvasHeight);
+    adjustCanvasHeight();
+  </script>
 </body>
 </html> 
