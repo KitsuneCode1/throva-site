@@ -288,6 +288,17 @@
 #sector-container{
     gap: 4rem;
 }
+.source-link {
+  text-decoration: underline;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.source-link:hover {
+  color: #00abfa;
+  text-decoration: underline;
+}
+
 
 #bigger-text{
     font-size: 1.2rem;
