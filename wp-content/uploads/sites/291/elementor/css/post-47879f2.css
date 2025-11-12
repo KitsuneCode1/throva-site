@@ -492,6 +492,31 @@
             font-size: 2.5rem;
         }
 
+        .sectors-content{
+            margin-top: 6rem;
+            padding: 0 2rem 4rem;
+        }
+        .content-text{
+            color: white;
+        }
+        .content-text h2{
+            font-size: 1.8rem;
+        }
+        .content-text ul{
+            font-size: 1rem;
+            padding-left: 0;
+            line-height: 1.7;
+            list-style-type: decimal;
+        }
+        .content-text ul li{
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+        .content-text p{
+            font-size: 1rem;
+            padding-bottom: 1rem;
+        }
+
         .subtext{
             font-size: 1rem;
             text-align: center;
