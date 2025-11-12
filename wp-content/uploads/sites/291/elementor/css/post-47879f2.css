@@ -321,6 +321,40 @@
     font-size: 1.2rem;
     padding-bottom: 1rem;
 }
+.blog{
+    padding: 0 2rem;
+    margin-bottom: 6rem;
+}
+.blog .container{
+    display: flex;
+    gap: 2rem;
+}
+.blog .container .blog-content{
+    border-radius: 10px;
+    background-color: #02052a;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.blog .container .blog-content .blog-img{
+    background-image: url(/wp-content/uploads/sites/291/2024/11/gold-ore.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13rem;
+    width: 100%;
+    transition: ease-in-out 0.3s;
+}
+.blog .container .blog-content:hover .blog-img{
+    background-size: 120%;
+}
+.blog .container .blog-content .blog-text{
+    padding: 2rem 2rem 1rem;
+}
+.blog .container .blog-content p{
+    margin-bottom: 4rem;
+}
 #bigger-text{
     font-size: 1.2rem;
 }
