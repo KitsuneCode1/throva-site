@@ -293,14 +293,33 @@
   font-weight: 400;
   transition: color 0.3s ease;
 }
-
 .source-link:hover {
   color: #00abfa;
   text-decoration: underline;
 }
-
-
-
+.sectors-content{
+    padding: 0 10rem 8rem;
+}
+.content-text{
+    color: white;
+}
+.content-text h2{
+    font-size: 3rem;
+}
+.content-text ul{
+    font-size: 1.2rem;
+    padding-left: 0;
+    
+    line-height: 1.5;
+    list-style-type: decimal;
+}
+.content-text ul li{
+    margin-left: 1rem;
+}
+.content-text p{
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
 #bigger-text{
     font-size: 1.2rem;
 }
