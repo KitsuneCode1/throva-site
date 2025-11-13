@@ -627,12 +627,15 @@
         .container .sector-content .row .col h3{
             text-align: center;
         }
-
         .container .sector-content .row #team-col ul{
-            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            gap: .5rem;
         }
-        .container .sector-content .row #team-col ul li{
-            margin-top: 2rem;
+        .container .sector-content .row #team-col p{
+            margin-top: 1rem;
         }
 
         .elementor-478 .elementor-element.elementor-element-1416053{
