@@ -329,31 +329,42 @@
     display: flex;
     gap: 2rem;
 }
-.blog .container .blog-content{
+.blog .container a .blog-content{
     border-radius: 10px;
     background-color: #02052a;
     cursor: pointer;
     transition: ease-in-out 0.3s;
+    width: 500px;
 }
-.blog .container .blog-content .blog-img{
-    background-image: url(/wp-content/uploads/sites/291/2024/11/gold-ore.jpg);
+.blog .container a .blog-content .blog-img{
+    height: 39%;
+    overflow: hidden;
+}
+
+.blog .container a .blog-content .blog-img img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 13rem;
+    transition: all .7s cubic-bezier(.2, 1, .22, 1);
+    max-height: 100%;
     width: 100%;
-    transition: ease-in-out 0.3s;
 }
-.blog .container .blog-content:hover .blog-img{
-    background-size: 120%;
+.blog .container a .blog-content .blog-img img:hover{
+    size: 120%;
 }
-.blog .container .blog-content .blog-text{
-    padding: 2rem 2rem 1rem;
+.blog .container a .blog-content .blog-text{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 0rem;
 }
-.blog .container .blog-content p{
+.blog .container a .blog-content .blog-text h3{
+    font-size: 1.8rem;
+}
+.blog .container .blog-content .blog-text h5
+.blog .containern a .blog-content p{
     margin-bottom: 4rem;
+}
+.blog .container a .blog-content .blog-text:nth-child(4){
+    justify-content: flex-end;
 }
 #bigger-text{
     font-size: 1.2rem;
