@@ -212,7 +212,11 @@
     width: 45%;
 }
 .container .sector-content .row .col h2{
-    font-size: 2.3rem;
+    text-align: center;
+    font-size: 5rem;
+}
+.container .sector-content .row .col h3{
+    text-align: center;
 }
 .container .sector-content .row .img-col{
     width: 45%;
@@ -221,6 +225,12 @@
 }
 .container .sector-content .row .img-col img{
     border-radius: 10px;
+}
+.container .sector-content .row #team-col ul{
+    padding-left: 3rem;
+}
+.container .sector-content .row #team-col ul li{
+    margin-top: 2rem;
 }
 
 #card-container{
@@ -300,7 +310,8 @@
 .sectors-content{
     padding: 0 10rem 8rem;
 }
-.content-text{
+.content-text li{
+    margin-top: 1rem;
     color: white;
 }
 .content-text h2{
@@ -309,7 +320,6 @@
 .content-text ul{
     font-size: 1.2rem;
     padding-left: 0;
-    
     line-height: 1.5;
     list-style-type: decimal;
 }
@@ -541,7 +551,7 @@
             margin-top: 6rem;
             padding: 0 2rem 4rem;
         }
-        .content-text{
+        .content-text li{
             color: white;
         }
         .content-text h2{
@@ -608,6 +618,21 @@
 
         .container .sector-content .row-2 .col:nth-child(1){
             order: 1;
+        }
+
+        .container .sector-content .row .col h2{
+            text-align: center;
+            font-size: 3rem;
+        }
+        .container .sector-content .row .col h3{
+            text-align: center;
+        }
+
+        .container .sector-content .row #team-col ul{
+            padding-left: 2rem;
+        }
+        .container .sector-content .row #team-col ul li{
+            margin-top: 2rem;
         }
 
         .elementor-478 .elementor-element.elementor-element-1416053{
