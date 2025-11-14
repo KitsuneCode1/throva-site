@@ -412,14 +412,14 @@
 
   @keyframes fadeInUp { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
 
-  @media(max-width:991px){ .blog-img img{height:200px;} }
+  @media(max-width:991px){ .blog-img img{height:40%;} }
   @media(max-width:767px){
-    .related-posts{padding:40px 20px;}
+    .related-posts{padding:40px 2rem;}
     .section-title h2{font-size:1.5rem;}
     .blog-box{margin-bottom:25px;}
     .blog-content h5{font-size:1rem;}
     .blog-content p{font-size:0.9rem;}
-    .blog-img img{height:180px;}
+    .blog-img img{height:35%;}
   }
   @media(max-width:480px){
     .section-title p{font-size:0.85rem; padding:0 20px;}
