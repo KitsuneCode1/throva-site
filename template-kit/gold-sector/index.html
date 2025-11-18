@@ -7,11 +7,136 @@
 	<link rel="pingback" href="../../xmlrpc.php" />
 	<title>Gold Sector</title>
 	<link rel="shortcut icon" href="../../wp-content/uploads/sites/291/2024/11/favicon.ico" type="image/x-icon">
-	
-<style>
-  body { font-family: 'Poppins', sans-serif; margin:0; padding:0; background:#fafafa; }
+	<style>
+#gold-progress {
+  padding: 60px 20px;
+  background: #000000;
+  color: #e7edff;
+  margin-bottom: 5rem;
+}
 
+.gold-wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
 
+.gold-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #0027b3;
+}
+
+.gold-subtext {
+  text-align: center;
+  max-width: 780px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Highlights List */
+.gold-highlights {
+  margin: 35px auto 20px;
+  max-width: 780px;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.gold-highlights li {
+  margin-bottom: 10px;
+}
+
+.gold-highlights strong {
+  color: #3357ff;
+}
+
+/* GRID */
+.gold-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* CARDS */
+.gold-box {
+  background: #0d143f;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0, 39, 179, 0.25);
+  border: 1px solid rgba(0, 39, 179, 0.2);
+  margin-bottom: 3rem;
+}
+
+.gold-box-title {
+  color: #e7edff;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Charts */
+canvas {
+  width: 100% !important;
+  height: 450px !important;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========= */
+@media (max-width: 768px) {
+
+  #gold-progress {
+    padding: 40px 15px;
+  }
+
+  .gold-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .gold-subtext {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .gold-highlights {
+    font-size: 16px;
+  }
+
+  .gold-box {
+    padding: 20px;
+  }
+
+  .gold-box-title {
+    font-size: 20px;
+  }
+
+  canvas {
+    max-height: 260px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-title {
+    font-size: 24px;
+  }
+
+  .gold-subtext {
+    font-size: 15px;
+  }
+
+  .gold-highlights {
+    font-size: 15px;
+  }
+
+  .gold-box-title {
+    font-size: 18px;
+  }
+
+  canvas {
+    max-height: 220px !important;
+  }
+}
 </style>
 <meta name='robots' content='max-image-preview:large' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
@@ -382,6 +507,56 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					</ul>
 				</div>
 			</section>
+
+<!-- ============================
+     THROVA GOLD PROGRESS SECTION
+     ============================ -->
+<section id="gold-progress">
+  <div class="gold-wrapper">
+
+    <!-- HEADER -->
+    <h2 class="gold-title">
+      Throva’s Progress in Gold Investments (2021 – Present)
+    </h2>
+
+    <p class="gold-subtext">
+      Since 2021, Throva has expanded its gold investment portfolio with strong,
+      stable year-on-year growth. Investor earnings have increased significantly,
+      supported by rising market demand and strategic gold-backed asset allocations.
+    </p>
+
+    <!-- HIGHLIGHTS LIST -->
+    <ul class="gold-highlights">
+      <li>Onboarded <strong>$2 million</strong> in investor capital in 2021.</li>
+      <li>Grew total investment exposure to <strong>$10 million</strong> by the end of 2023.</li>
+      <li>Delivered cumulative returns of <strong>18%</strong> to investors by mid-2024.</li>
+      <li>Expanded our physical gold holdings, leveraging insured logistics and certified mines.</li>
+      <li>Launched a tokenized gold-backed product in early 2025, opening new liquidity channels.</li>
+    </ul>
+
+    <!-- GRID -->
+    <div class="gold-grid">
+
+      <!-- LINE CHART CARD -->
+      <div class="gold-box">
+        <h3 class="gold-box-title">
+          Annual Gold AUM Growth & Investor Returns
+        </h3>
+        <canvas id="goldLineChart"></canvas>
+      </div>
+
+      <!-- BAR GRAPH CARD -->
+      <div class="gold-box">
+        <h3 class="gold-box-title">
+          Yearly Increase in Gold Investments
+        </h3>
+        <canvas id="goldBarChart"></canvas>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 			
   <!-- === Related Posts Section === -->
  <section class="related-posts">
@@ -746,8 +921,112 @@ var GutenverseFormValidationData = {"data":[],"missingLabel":"Form action is mis
 var ekit_config = {"ajaxurl":"https:\/\/kitpro.site\/investure\/wp-admin\/admin-ajax.php","nonce":"283d269f69"};
 </script>
 <script src="../../wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor6b00.js?ver=3.4.0" id="elementskit-elementor-js"></script>
+<!-- ============================
+     CHART.JS CDN
+     ============================ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
-	AOS.init({duration:1200,once:true});
+/* -----------------------------
+   LINE CHART WITH BLUE OVERLAY
+   ----------------------------- */
+const ctxLine = document.getElementById('goldLineChart').getContext('2d');
+
+const gradient = ctxLine.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgba(0, 39, 179, 0.45)");
+gradient.addColorStop(1, "rgba(0, 39, 179, 0)");
+
+const years = ['2021', '2022', '2023', '2024', '2025'];
+const aum = [2, 5, 10, 12, 15];
+const returns = [0, 5, 12, 18, 20];
+
+new Chart(ctxLine, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      {
+        label: 'Gold AUM (US$ millions)',
+        data: aum,
+        borderColor: '#0027b3',
+        backgroundColor: gradient,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#0027b3',
+        pointRadius: 6,
+        pointHoverRadius: 8,
+      },
+      {
+        label: 'Cumulative Return (%)',
+        data: returns,
+        borderColor: '#3357ff',
+        backgroundColor: "rgba(51, 87, 255, 0.15)",
+        fill: false,
+        tension: 0.4,
+        pointBackgroundColor: '#3357ff',
+        pointRadius: 6,
+        pointHoverRadius: 8,
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 2200, easing: "easeOutQuart" },
+    scales: {
+      y: {
+        position: 'left',
+        ticks: { color: '#e7edff' },
+        title: { text: 'AUM (US$ millions)', display: true, color: '#e7edff' }
+      },
+      y1: {
+        position: 'right',
+        ticks: { color: '#e7edff' },
+        grid: { drawOnChartArea: false },
+        title: { text: 'Return (%)', display: true, color: '#e7edff' }
+      },
+      x: {
+        ticks: { color: '#e7edff' }
+      }
+    },
+    plugins: {
+      legend: { labels: { color: '#e7edff' } }
+    }
+  }
+});
+
+
+/* -----------------------------
+      BAR GRAPH - BLUE THEME
+   ----------------------------- */
+const ctxBar = document.getElementById('goldBarChart').getContext('2d');
+
+new Chart(ctxBar, {
+  type: 'bar',
+  data: {
+    labels: years,
+    datasets: [{
+      label: "Yearly Growth (US$ millions)",
+      data: [2, 3, 5, 2, 3],
+      backgroundColor: 'rgba(0, 39, 179, 0.8)',
+      borderColor: '#0027b3',
+      borderWidth: 2,
+      hoverBackgroundColor: 'hsl(227, 100%, 45%)',
+      hoverBorderColor: '#3357ff'
+    }]
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 2000, easing: "easeOutCirc" },
+    scales: {
+      y: { ticks: { color: '#e7edff' } },
+      x: { ticks: { color: '#e7edff' } }
+    },
+    plugins: {
+      legend: { labels: { color: '#e7edff' } }
+    }
+  }
+});
 </script>
 </body>
 </html> 
