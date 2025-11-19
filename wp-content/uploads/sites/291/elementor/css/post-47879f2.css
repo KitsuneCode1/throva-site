@@ -491,6 +491,7 @@
 
   #sector-progress {
     padding: 40px 15px;
+    gap: 0;
   }
 
   .sector-progress-title {
@@ -517,30 +518,33 @@
 
   #sectorLineChart,
   #sectorBarChart {
-    max-height: 260px !important;
+    max-height: 300px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .gold-title {
+    .sector-progress-box {
+        padding: 20px 20px 10px;
+    }
+  .sector-progress-title {
     font-size: 24px;
   }
 
-  .gold-subtext {
+  .sector-progress-subtext {
     font-size: 15px;
   }
 
-  .gold-highlights {
+  .sector-progress-highlights {
     font-size: 15px;
   }
 
-  .gold-box-title {
+  .sector-progress-box-title {
     font-size: 18px;
   }
 
   #sectorLineChart,
   #sectorBarChart {
-    max-height: 220px !important;
+    max-height: 342px !important;
   }
 }
 

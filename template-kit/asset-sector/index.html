@@ -383,16 +383,16 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     </h2>
 
     <p class="sector-progress-subtext">
-      Throva’s AI investment division has expanded rapidly since 2021, powered by automation, predictive analytics, and high-performance data systems. Yearly capital inflows and investor returns continue to grow as our AI infrastructure evolves.
+        Our asset-backed investments have grown steadily, combining real-world assets with strategy. Throva expanded its asset framework to improve portfolio balance and market timing. This approach has strengthened investor confidence and opened new growth opportunities.
     </p>
 
     <!-- HIGHLIGHTS LIST -->
     <ul class="sector-progress-highlights">
-      <li>Onboarded <strong>$4 million</strong> in AI-focused investor capital in 2021.</li>
-      <li>Scaled total AI exposure to <strong>$14 million</strong> by late 2023.</li>
-      <li>Delivered cumulative investor returns of <strong>22%</strong> by mid-2024.</li>
-      <li>Built proprietary AI systems for analytics, automation, and prediction.</li>
-      <li>Launched an AI-driven portfolio optimizer in 2025, boosting investor performance tools.</li>
+      <li>Recovered <strong>$2.8 million</strong> in distressed assets for investors since 2021.</li>
+      <li>Engaged with over <strong>15</strong> asset recovery partners globally to improve recovery rates.</li>
+      <li>Achieved a <strong>75%</strong> average return rate on recovered assets in core sectors.</li>
+      <li>Implemented proprietary AI‑driven analytics to identify undervalued recovery targets.</li>
+      <li>Launched a tokenized recovery fund in 2024 to fractionalize recovered-asset ownership.</li>
     </ul>
 
     <!-- GRID -->
@@ -401,7 +401,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       <!-- LINE CHART CARD -->
       <div class="sector-progress-box">
         <h3 class="sector-progress-box-title">
-          AI Investment Growth & Performance
+          Annual Asset Recovery AUM Growth & Investor Returns
         </h3>
         <canvas id="sectorLineChart"></canvas>
       </div>
@@ -409,7 +409,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       <!-- BAR GRAPH CARD -->
       <div class="sector-progress-box">
         <h3 class="sector-progress-box-title">
-          Annual AI Investment Growth
+          Annual Asset Recovery Investment Growth
         </h3>
         <canvas id="sectorBarChart"></canvas>
       </div>
@@ -798,8 +798,8 @@ gradient.addColorStop(0, "rgba(0, 39, 179, 0.45)");
 gradient.addColorStop(1, "rgba(0, 39, 179, 0)");
 
 const years = ['2021', '2022', '2023', '2024', '2025'];
-const aum = [2, 5, 10, 12, 15];
-const returns = [0, 5, 12, 18, 20];
+const aum = [5, 10, 16, 23, 30];
+const returns = [2, 5, 9, 14, 20];
 
 new Chart(ctxLine, {
   type: 'line',
@@ -807,7 +807,7 @@ new Chart(ctxLine, {
     labels: years,
     datasets: [
       {
-        label: 'Gold AUM (USD millions)',
+        label: 'Asset AUM (USD millions)',
         data: aum,
         borderColor: '#0027b3',
         backgroundColor: gradient,
@@ -815,7 +815,7 @@ new Chart(ctxLine, {
         tension: 0.4,
         pointBackgroundColor: '#0027b3',
         pointRadius: 6,
-        pointHoverRadius: 8,
+        pointHoverRadius: 8
       },
       {
         label: 'Cumulative Return (%)',
@@ -842,7 +842,7 @@ new Chart(ctxLine, {
 			text: 'Asset Under Management (USD millions)', 
 			display: true, 
 			color: '#e7edff', 
-			font: { size: isDesktop ? 18 : 10 }
+			font: { size: isDesktop ? 18 : 8 }
 		}
       },
       y1: {
@@ -853,7 +853,7 @@ new Chart(ctxLine, {
 			text: 'Return (%)',
 			display: true,
 			color: '#e7edff',
-			font: { size: isDesktop ? 24 : 14 }
+			font: { size: isDesktop ? 24 : 12 }
 		}
 		
       },
@@ -886,7 +886,7 @@ new Chart(ctxBar, {
     labels: years,
     datasets: [{
       label: "Annual Growth (USD millions)",
-      data: [2, 3, 5, 2, 3],
+      data: [5, 5, 6, 7, 7],
       backgroundColor: 'rgba(0, 39, 179, 0.8)',
       borderColor: '#0027b3',
       borderWidth: 2,
@@ -904,7 +904,7 @@ new Chart(ctxBar, {
 				text: 'Annual Growth (USD Millions)',
 				display: true,
 				color: '#e7edff',
-				font: { size: isDesktop ? 18 : 10 }
+				font: { size: isDesktop ? 18 : 8 }
           	} 
 		},
       x: { 
