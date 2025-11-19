@@ -383,16 +383,16 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     </h2>
 
     <p class="sector-progress-subtext">
-      Throva’s AI investment division has expanded rapidly since 2021, powered by automation, predictive analytics, and high-performance data systems. Yearly capital inflows and investor returns continue to grow as our AI infrastructure evolves.
+       Throva’s equities investments have steadily grown, focusing on high-quality global stocks, diversified sectors, and long-term value creation. We leverage deep research, market analytics, and risk management to create a balanced, equity‑first investment portfolio.
     </p>
 
     <!-- HIGHLIGHTS LIST -->
     <ul class="sector-progress-highlights">
-      <li>Onboarded <strong>$4 million</strong> in AI-focused investor capital in 2021.</li>
-      <li>Scaled total AI exposure to <strong>$14 million</strong> by late 2023.</li>
-      <li>Delivered cumulative investor returns of <strong>22%</strong> by mid-2024.</li>
-      <li>Built proprietary AI systems for analytics, automation, and prediction.</li>
-      <li>Launched an AI-driven portfolio optimizer in 2025, boosting investor performance tools.</li>
+      <li>Allocated <strong>$5 million</strong> to equities since 2021.</li>
+      <li>Invested in over <strong>30</strong> global companies across technology, healthcare, and consumer sectors.</li>
+      <li>Delivered a <strong>12%</strong> average annual return through disciplined stock selection.</li>
+      <li>Built a proprietary equity‑valuation model leveraging AI and financial modeling.</li>
+      <li>Launched a tokenized equity product in 2024 to enhance liquidity and access.</li>
     </ul>
 
     <!-- GRID -->
@@ -401,7 +401,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       <!-- LINE CHART CARD -->
       <div class="sector-progress-box">
         <h3 class="sector-progress-box-title">
-          AI Investment Growth & Performance
+          Annual Equities AUM Growth & Investor Returns
         </h3>
         <canvas id="sectorLineChart"></canvas>
       </div>
@@ -409,7 +409,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       <!-- BAR GRAPH CARD -->
       <div class="sector-progress-box">
         <h3 class="sector-progress-box-title">
-          Annual AI Investment Growth
+          Annual Equities Investment Growth
         </h3>
         <canvas id="sectorBarChart"></canvas>
       </div>
@@ -798,8 +798,8 @@ gradient.addColorStop(0, "rgba(0, 39, 179, 0.45)");
 gradient.addColorStop(1, "rgba(0, 39, 179, 0)");
 
 const years = ['2021', '2022', '2023', '2024', '2025'];
-const aum = [2, 5, 10, 12, 15];
-const returns = [0, 5, 12, 18, 20];
+const aum = [5, 9, 15, 22, 28];
+const returns = [0, 5, 9, 12, 15];
 
 new Chart(ctxLine, {
   type: 'line',
@@ -807,7 +807,7 @@ new Chart(ctxLine, {
     labels: years,
     datasets: [
       {
-        label: 'Gold AUM (USD millions)',
+        label: 'Equities AUM (USD millions)',
         data: aum,
         borderColor: '#0027b3',
         backgroundColor: gradient,
@@ -842,7 +842,7 @@ new Chart(ctxLine, {
 			text: 'Asset Under Management (USD millions)', 
 			display: true, 
 			color: '#e7edff', 
-			font: { size: isDesktop ? 18 : 10 }
+			font: { size: isDesktop ? 18 : 8 }
 		}
       },
       y1: {
@@ -853,7 +853,7 @@ new Chart(ctxLine, {
 			text: 'Return (%)',
 			display: true,
 			color: '#e7edff',
-			font: { size: isDesktop ? 24 : 14 }
+			font: { size: isDesktop ? 24 : 12 }
 		}
 		
       },
@@ -886,7 +886,7 @@ new Chart(ctxBar, {
     labels: years,
     datasets: [{
       label: "Annual Growth (USD millions)",
-      data: [2, 3, 5, 2, 3],
+      data: [5, 4, 6, 7, 5],
       backgroundColor: 'rgba(0, 39, 179, 0.8)',
       borderColor: '#0027b3',
       borderWidth: 2,
@@ -904,7 +904,7 @@ new Chart(ctxBar, {
 				text: 'Annual Growth (USD Millions)',
 				display: true,
 				color: '#e7edff',
-				font: { size: isDesktop ? 18 : 10 }
+				font: { size: isDesktop ? 18 : 8 }
           	} 
 		},
       x: { 
