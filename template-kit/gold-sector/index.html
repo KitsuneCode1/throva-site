@@ -931,6 +931,7 @@ var ekit_config = {"ajaxurl":"https:\/\/kitpro.site\/investure\/wp-admin\/admin-
    LINE CHART WITH BLUE OVERLAY
    ----------------------------- */
 const ctxLine = document.getElementById('goldLineChart').getContext('2d');
+const isDesktop = window.innerWidth >= 768;
 
 const gradient = ctxLine.createLinearGradient(0, 0, 0, 400);
 gradient.addColorStop(0, "rgba(0, 39, 179, 0.45)");
@@ -946,7 +947,7 @@ new Chart(ctxLine, {
     labels: years,
     datasets: [
       {
-        label: 'Gold AUM (US$ millions)',
+        label: 'Gold AUM (USD millions)',
         data: aum,
         borderColor: '#0027b3',
         backgroundColor: gradient,
@@ -977,16 +978,34 @@ new Chart(ctxLine, {
       y: {
         position: 'left',
         ticks: { color: '#e7edff' },
-        title: { text: 'AUM (US$ millions)', display: true, color: '#e7edff' }
+        title: { 
+			text: 'Asset Under Management (USD millions)', 
+			display: true, 
+			color: '#e7edff', 
+			font: { size: isDesktop ? 20 : 10 }
+		}
       },
       y1: {
         position: 'right',
         ticks: { color: '#e7edff' },
         grid: { drawOnChartArea: false },
-        title: { text: 'Return (%)', display: true, color: '#e7edff' }
+        title: { 
+			text: 'Return (%)',
+			display: true,
+			color: '#e7edff',
+			font: { size: isDesktop ? 30 : 14 }
+		}
+		
       },
       x: {
-        ticks: { color: '#e7edff' }
+        ticks: { color: '#e7edff' },
+		title: {
+			text: 'Year',
+			display: true,
+			color: '#e7edff',
+			font: { size: isDesktop ? 32 : 20 },   // ⭐ desktop: 2rem, mobile: smaller
+    		padding: { top: isDesktop ? 16 : 8 }
+		}
       }
     },
     plugins: {
@@ -1006,7 +1025,7 @@ new Chart(ctxBar, {
   data: {
     labels: years,
     datasets: [{
-      label: "Yearly Growth (US$ millions)",
+      label: "Yearly Growth (USD millions)",
       data: [2, 3, 5, 2, 3],
       backgroundColor: 'rgba(0, 39, 179, 0.8)',
       borderColor: '#0027b3',
@@ -1019,8 +1038,25 @@ new Chart(ctxBar, {
     responsive: true,
     animation: { duration: 2000, easing: "easeOutCirc" },
     scales: {
-      y: { ticks: { color: '#e7edff' } },
-      x: { ticks: { color: '#e7edff' } }
+      y: { 	
+			ticks: { color: '#e7edff' },
+		   	title: {
+				text: 'Annual Growth (USD Millions)',
+				display: true,
+				color: '#e7edff',
+				font: { size: isDesktop ? 20 : 10 }
+          	} 
+		},
+      x: { 
+			ticks: { color: '#e7edff' },
+			title: {
+				text: 'Year',
+				display: true,
+				color: '#e7edff',
+				font: { size: 22 },
+				padding: { top: 10 } 
+			}
+		 }
     },
     plugins: {
       legend: { labels: { color: '#e7edff' } }
