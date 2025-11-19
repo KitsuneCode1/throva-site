@@ -371,6 +371,54 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 			</section>
 
+<!-- ============================
+     THROVA OIL & GAS SECTOR PROGRESS
+     ============================ -->
+
+<section id="sector-progress">
+  <div class="sector-progress-wrapper">
+
+    <!-- HEADER -->
+    <h2 class="sector-progress-title">
+      Throva’s Progress in Oil & Gas Investments (2021 – Present)
+    </h2>
+
+    <p class="sector-progress-subtext">
+      Throva’s AI investment division has expanded rapidly since 2021, powered by automation, predictive analytics, and high-performance data systems. Yearly capital inflows and investor returns continue to grow as our AI infrastructure evolves.
+    </p>
+
+    <!-- HIGHLIGHTS LIST -->
+    <ul class="sector-progress-highlights">
+      <li>Onboarded <strong>$4 million</strong> in AI-focused investor capital in 2021.</li>
+      <li>Scaled total AI exposure to <strong>$14 million</strong> by late 2023.</li>
+      <li>Delivered cumulative investor returns of <strong>22%</strong> by mid-2024.</li>
+      <li>Built proprietary AI systems for analytics, automation, and prediction.</li>
+      <li>Launched an AI-driven portfolio optimizer in 2025, boosting investor performance tools.</li>
+    </ul>
+
+    <!-- GRID -->
+    <div class="sector-progress-grid">
+
+      <!-- LINE CHART CARD -->
+      <div class="sector-progress-box">
+        <h3 class="sector-progress-box-title">
+          AI Investment Growth & Performance
+        </h3>
+        <canvas id="sectorLineChart"></canvas>
+      </div>
+
+      <!-- BAR GRAPH CARD -->
+      <div class="sector-progress-box">
+        <h3 class="sector-progress-box-title">
+          Annual AI Investment Growth
+        </h3>
+        <canvas id="sectorBarChart"></canvas>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 			<!-- === Related Posts Section === -->
  <section class="related-posts">
   <div class="container">
@@ -735,5 +783,147 @@ var GutenverseFormValidationData = {"data":[],"missingLabel":"Form action is mis
 var ekit_config = {"ajaxurl":"https:\/\/kitpro.site\/investure\/wp-admin\/admin-ajax.php","nonce":"283d269f69"};
 </script>
 <script src="../../wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor6b00.js?ver=3.4.0" id="elementskit-elementor-js"></script>
+<!-- ============================
+     CHART.JS CDN
+     ============================ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+	/* -----------------------------
+   LINE CHART WITH BLUE OVERLAY
+   ----------------------------- */
+const ctxLine = document.getElementById('sectorLineChart').getContext('2d');
+const isDesktop = window.innerWidth >= 768;
+
+const gradient = ctxLine.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgba(0, 39, 179, 0.45)");
+gradient.addColorStop(1, "rgba(0, 39, 179, 0)");
+
+const years = ['2021', '2022', '2023', '2024', '2025'];
+const aum = [2, 5, 10, 12, 15];
+const returns = [0, 5, 12, 18, 20];
+
+new Chart(ctxLine, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+      {
+        label: 'Gold AUM (USD millions)',
+        data: aum,
+        borderColor: '#0027b3',
+        backgroundColor: gradient,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#0027b3',
+        pointRadius: 6,
+        pointHoverRadius: 8,
+      },
+      {
+        label: 'Cumulative Return (%)',
+        data: returns,
+        borderColor: '#3357ff',
+        backgroundColor: "rgba(51, 87, 255, 0.15)",
+        fill: false,
+        tension: 0.4,
+        pointBackgroundColor: '#3357ff',
+        pointRadius: 6,
+        pointHoverRadius: 8,
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 2200, easing: "easeOutQuart" },
+    scales: {
+      y: {
+        position: 'left',
+        ticks: { color: '#e7edff' },
+        title: { 
+			text: 'Asset Under Management (USD millions)', 
+			display: true, 
+			color: '#e7edff', 
+			font: { size: isDesktop ? 18 : 10 }
+		}
+      },
+      y1: {
+        position: 'right',
+        ticks: { color: '#e7edff' },
+        grid: { drawOnChartArea: false },
+        title: { 
+			text: 'Return (%)',
+			display: true,
+			color: '#e7edff',
+			font: { size: isDesktop ? 24 : 14 }
+		}
+		
+      },
+      x: {
+        ticks: { color: '#e7edff' },
+		title: {
+			text: 'Year',
+			display: true,
+			color: '#e7edff',
+			font: { size: isDesktop ? 32 : 20 },   // ⭐ desktop: 2rem, mobile: smaller
+    		padding: { top: isDesktop ? 16 : 8 }
+		}
+      }
+    },
+    plugins: {
+      legend: { labels: { color: '#e7edff' } }
+    }
+  }
+});
+
+
+/* -----------------------------
+      BAR GRAPH - BLUE THEME
+   ----------------------------- */
+const ctxBar = document.getElementById('sectorBarChart').getContext('2d');
+
+new Chart(ctxBar, {
+  type: 'bar',
+  data: {
+    labels: years,
+    datasets: [{
+      label: "Annual Growth (USD millions)",
+      data: [2, 3, 5, 2, 3],
+      backgroundColor: 'rgba(0, 39, 179, 0.8)',
+      borderColor: '#0027b3',
+      borderWidth: 2,
+      hoverBackgroundColor: 'hsl(227, 100%, 45%)',
+      hoverBorderColor: '#3357ff'
+    }]
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 2000, easing: "easeOutCirc" },
+    scales: {
+      y: { 	
+			ticks: { color: '#e7edff' },
+		   	title: {
+				text: 'Annual Growth (USD Millions)',
+				display: true,
+				color: '#e7edff',
+				font: { size: isDesktop ? 18 : 10 }
+          	} 
+		},
+      x: { 
+			ticks: { color: '#e7edff' },
+			title: {
+				text: 'Year',
+				display: true,
+				color: '#e7edff',
+				font: { size: isDesktop ? 32 : 20 },   // ⭐ desktop: 2rem, mobile: smaller
+    			padding: { top: isDesktop ? 16 : 8 }
+			}
+		 }
+    },
+    plugins: {
+      legend: { labels: { color: '#e7edff' } }
+    }
+  }
+});
+</script>
 </body>
 </html> 

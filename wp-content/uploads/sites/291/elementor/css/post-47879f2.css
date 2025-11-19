@@ -411,6 +411,138 @@
   .blog-date { font-size:0.9rem; color:white; margin-top:3rem; }
 
   @keyframes fadeInUp { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+  #sector-progress {
+  padding: 60px 20px;
+  background: #000000;
+  color: #e7edff;
+  margin-bottom: 5rem;
+}
+
+.sector-progress-wrapper {
+  max-width: 1020px;
+  margin: auto;
+}
+
+.sector-progress-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #0027b3;
+}
+
+.sector-progress-subtext {
+  text-align: center;
+  max-width: 780px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Highlights List */
+.sector-progress-highlights {
+  margin: 35px auto 20px;
+  max-width: 780px;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.sector-progress-highlights li {
+  margin-bottom: 10px;
+}
+
+.sector-progress-highlights strong {
+  color: #3357ff;
+}
+
+/* GRID */
+.sector-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* CARDS */
+.sector-progress-box {
+  background: #0d143f;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 30px rgba(0, 39, 179, 0.25);
+  border: 1px solid rgba(0, 39, 179, 0.2);
+  margin-bottom: 3rem;
+}
+
+.sector-progress-box-title {
+  color: #e7edff;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+/* Charts */
+#sectorLineChart,
+#sectorBarChart {
+  width: 100% !important;
+  height: 450px !important;
+}
+
+/* ========== MOBILE RESPONSIVENESS ========= */
+@media (max-width: 768px) {
+
+  #sector-progress {
+    padding: 40px 15px;
+  }
+
+  .sector-progress-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .sector-progress-subtext {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .sector-progress-highlights {
+    font-size: 16px;
+  }
+
+  .sector-progress-box {
+    padding: 20px;
+  }
+
+  .sector-progress-box-title {
+    font-size: 20px;
+  }
+
+  #sectorLineChart,
+  #sectorBarChart {
+    max-height: 260px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-title {
+    font-size: 24px;
+  }
+
+  .gold-subtext {
+    font-size: 15px;
+  }
+
+  .gold-highlights {
+    font-size: 15px;
+  }
+
+  .gold-box-title {
+    font-size: 18px;
+  }
+
+  #sectorLineChart,
+  #sectorBarChart {
+    max-height: 220px !important;
+  }
+}
 
   @media(max-width:991px){ .blog-img img{height:40%;} }
   @media(max-width:767px){
@@ -425,6 +557,7 @@
     .section-title p{font-size:0.85rem; padding:0 20px;}
     .blog-content{padding:16px;}
   }
+
 @media(max-width:1024px){
     .elementor-478 .elementor-element.elementor-element-1416053{
         --padding-top:200px;

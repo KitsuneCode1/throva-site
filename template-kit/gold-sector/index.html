@@ -7,137 +7,6 @@
 	<link rel="pingback" href="../../xmlrpc.php" />
 	<title>Gold Sector</title>
 	<link rel="shortcut icon" href="../../wp-content/uploads/sites/291/2024/11/favicon.ico" type="image/x-icon">
-	<style>
-#gold-progress {
-  padding: 60px 20px;
-  background: #000000;
-  color: #e7edff;
-  margin-bottom: 5rem;
-}
-
-.gold-wrapper {
-  max-width: 1020px;
-  margin: auto;
-}
-
-.gold-title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: #0027b3;
-}
-
-.gold-subtext {
-  text-align: center;
-  max-width: 780px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Highlights List */
-.gold-highlights {
-  margin: 35px auto 20px;
-  max-width: 780px;
-  padding-left: 20px;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.gold-highlights li {
-  margin-bottom: 10px;
-}
-
-.gold-highlights strong {
-  color: #3357ff;
-}
-
-/* GRID */
-.gold-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  margin-top: 50px;
-}
-
-/* CARDS */
-.gold-box {
-  background: #0d143f;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 0 30px rgba(0, 39, 179, 0.25);
-  border: 1px solid rgba(0, 39, 179, 0.2);
-  margin-bottom: 3rem;
-}
-
-.gold-box-title {
-  color: #e7edff;
-  margin-bottom: 15px;
-  font-size: 26px;
-}
-
-/* Charts */
-canvas {
-  width: 100% !important;
-  height: 450px !important;
-}
-
-/* ========== MOBILE RESPONSIVENESS ========= */
-@media (max-width: 768px) {
-
-  #gold-progress {
-    padding: 40px 15px;
-  }
-
-  .gold-title {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .gold-subtext {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .gold-highlights {
-    font-size: 16px;
-  }
-
-  .gold-box {
-    padding: 20px;
-  }
-
-  .gold-box-title {
-    font-size: 20px;
-  }
-
-  canvas {
-    max-height: 260px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .gold-title {
-    font-size: 24px;
-  }
-
-  .gold-subtext {
-    font-size: 15px;
-  }
-
-  .gold-highlights {
-    font-size: 15px;
-  }
-
-  .gold-box-title {
-    font-size: 18px;
-  }
-
-  canvas {
-    max-height: 220px !important;
-  }
-}
-</style>
 <meta name='robots' content='max-image-preview:large' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../feed/index.html" />
@@ -511,22 +380,22 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <!-- ============================
      THROVA GOLD PROGRESS SECTION
      ============================ -->
-<section id="gold-progress">
-  <div class="gold-wrapper">
+<section id="sector-progress">
+  <div class="sector-progress-wrapper">
 
     <!-- HEADER -->
-    <h2 class="gold-title">
+    <h2 class="sector-progress-title">
       Throva’s Progress in Gold Investments (2021 – Present)
     </h2>
 
-    <p class="gold-subtext">
+    <p class="sector-progress-subtext">
       Since 2021, Throva has expanded its gold investment portfolio with strong,
       stable year-on-year growth. Investor earnings have increased significantly,
       supported by rising market demand and strategic gold-backed asset allocations.
     </p>
 
     <!-- HIGHLIGHTS LIST -->
-    <ul class="gold-highlights">
+    <ul class="sector-progress-highlights">
       <li>Onboarded <strong>$2 million</strong> in investor capital in 2021.</li>
       <li>Grew total investment exposure to <strong>$10 million</strong> by the end of 2023.</li>
       <li>Delivered cumulative returns of <strong>18%</strong> to investors by mid-2024.</li>
@@ -535,22 +404,22 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     </ul>
 
     <!-- GRID -->
-    <div class="gold-grid">
+    <div class="sector-progress-grid">
 
       <!-- LINE CHART CARD -->
-      <div class="gold-box">
-        <h3 class="gold-box-title">
+      <div class="sector-progress-box">
+        <h3 class="sector-progress-box-title">
           Annual Gold AUM Growth & Investor Returns
         </h3>
-        <canvas id="goldLineChart"></canvas>
+        <canvas id="sectorLineChart"></canvas>
       </div>
 
       <!-- BAR GRAPH CARD -->
-      <div class="gold-box">
-        <h3 class="gold-box-title">
-          Yearly Increase in Gold Investments
+      <div class="sector-progress-box">
+        <h3 class="sector-progress-box-title">
+          Annual Gold Investment Growth
         </h3>
-        <canvas id="goldBarChart"></canvas>
+        <canvas id="sectorBarChart"></canvas>
       </div>
 
     </div>
@@ -925,12 +794,11 @@ var ekit_config = {"ajaxurl":"https:\/\/kitpro.site\/investure\/wp-admin\/admin-
      CHART.JS CDN
      ============================ -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
-/* -----------------------------
+	/* -----------------------------
    LINE CHART WITH BLUE OVERLAY
    ----------------------------- */
-const ctxLine = document.getElementById('goldLineChart').getContext('2d');
+const ctxLine = document.getElementById('sectorLineChart').getContext('2d');
 const isDesktop = window.innerWidth >= 768;
 
 const gradient = ctxLine.createLinearGradient(0, 0, 0, 400);
@@ -1018,14 +886,14 @@ new Chart(ctxLine, {
 /* -----------------------------
       BAR GRAPH - BLUE THEME
    ----------------------------- */
-const ctxBar = document.getElementById('goldBarChart').getContext('2d');
+const ctxBar = document.getElementById('sectorBarChart').getContext('2d');
 
 new Chart(ctxBar, {
   type: 'bar',
   data: {
     labels: years,
     datasets: [{
-      label: "Yearly Growth (USD millions)",
+      label: "Annual Growth (USD millions)",
       data: [2, 3, 5, 2, 3],
       backgroundColor: 'rgba(0, 39, 179, 0.8)',
       borderColor: '#0027b3',
