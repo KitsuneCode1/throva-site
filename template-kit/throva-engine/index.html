@@ -7,6 +7,109 @@
 	<link rel="pingback" href="../../xmlrpc.php" />
 	<title>Throva Engine</title>
 	<link rel="shortcut icon" href="../../wp-content/uploads/sites/291/2024/11/favicon.ico" type="image/x-icon">
+	<style>
+.tiers-section {
+  padding: 4rem 4rem;
+  margin-bottom: 5rem;
+}
+
+.tiers-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tiers-section p {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+}
+
+.tiers-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tier-card {
+  min-width: 300px;
+  background: #01145a;
+  padding: 2rem;
+  border: 1px solid #0d2a52;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* Hover lift effect */
+.tier-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 15px 25px rgba(0, 136, 255, 0.45);
+  border-color: #198bff;
+}
+
+.tier-card p{
+	color: #fafafa;
+	margin-bottom: 2.5rem;
+}
+
+/* Pricing */
+.tier-price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+/* Features */
+.tier-features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.tier-features li {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.tier-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.main-cta {
+  padding: 0.75rem 2rem;
+  background-color: #0051a3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.tier-cta:hover{
+	background-color: hsl(210, 100%, 42%);
+	color: #fff;
+}
+
+.tiers-note {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.tiers-note p{
+	margin-bottom: 0;
+}
+
+@media (max-width: 760px){
+	.tiers-section{
+		padding: 0 2rem;
+	}
+}
+</style>
 <meta name='robots' content='max-image-preview:large' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="../../feed/index.html" />
@@ -289,7 +392,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				
 			</div>
 		</div>
-		<div class="elementor-element elementor-element-5e56cfe e-flex e-con-boxed e-con e-parent" data-id="5e56cfe" data-element_type="container">
+		<div class="elementor-element elementor-element-5e56cfe e-flex e-con-boxed e-con e-parent" data-id="5e56cfe" data-element_type="container" style="margin-top: 10rem;">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-5a1a86d e-flex e-con-boxed e-con e-child" data-id="5a1a86d" data-element_type="container">
 					<div class="e-con-inner">
@@ -413,6 +516,111 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 					</div>
 				</div>
+
+				<!-- INVESTMENT TIERS SECTION -->
+<section id="investment-tiers" class="tiers-section">
+  <div class="container">
+    <h2>Investment Tiers</h2>
+    <p>Explore our structured paths to invest: from early-entry access to legacy-level co-ownership.</p>
+
+    <div class="tiers-grid">
+      
+      <!-- Tier 1 -->
+      <div class="tier-card">
+        <h3>Ignite Seed</h3>
+        <p class="tier-price">US $2,000+</p>
+        <ul class="tier-features">
+          <li>Gold Spot Trades</li>
+          <li>Live Trade Alerts</li>
+          <li>Community Onboarding</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="tier-card">
+        <h3>Pulse Builder</h3>
+        <p class="tier-price">US $20,000+</p>
+        <ul class="tier-features">
+          <li>Equity Pool Access</li>
+          <li>Smart Farm Exposure</li>
+          <li>Quarterly Reports</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+      <!-- Tier 3 (Recommended) -->
+      <div class="tier-card recommended">
+        <h3>Quantum Lift</h3>
+        <p class="tier-price">US $100,000+</p>
+        <ul class="tier-features">
+          <li>Private Oil Desk Access</li>
+          <li>Wine Tastings & Vineyard Access</li>
+          <li>Monthly Strategy Huddle</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+      <!-- Tier 4 -->
+      <div class="tier-card">
+        <h3>Momentum Crest</h3>
+        <p class="tier-price">US $200,000+</p>
+        <ul class="tier-features">
+          <li>Priority Asset Recovery</li>
+          <li>Dashboard Real-Time Metrics</li>
+          <li>Early Co-Investment Access</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+      <!-- Tier 5 -->
+      <div class="tier-card">
+        <h3>Legacy Forge</h3>
+        <p class="tier-price">US $750,000+</p>
+        <ul class="tier-features">
+          <li>Vineyard Co-Ownership</li>
+          <li>Gold Asset Co-Ownership</li>
+          <li>Private Placement First-Look</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+      <!-- Tier 6 -->
+      <div class="tier-card">
+        <h3>Sovereign Apex</h3>
+        <p class="tier-price">US $2,000,000+</p>
+        <ul class="tier-features">
+          <li>Revenue Share Across All Sectors</li>
+          <li>All Legacy Forge Benefits</li>
+          <li>Strategic Retreat Invitations</li>
+        </ul>
+        <a href="#contact" class="tier-cta">Join Tier</a>
+      </div>
+
+    </div>
+
+	<div class="tiers-note">
+		<p>All tiers come with transparent, auditable deal access and a dashboard to track your investment performance.</p>
+	</div>
+
+    <div class="elementor-element elementor-element-84285f8 elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="84285f8" data-element_type="widget" data-widget_type="button.default">
+		<div class="elementor-widget-container" style="text-align: center; margin-top: 2rem;" >
+			<div class="elementor-button-wrapper">
+				<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="../../template-kit/contact-us/index.html" style="background-color: #0039b3;">
+					<span class="elementor-button-content-wrapper" id="tryp-btn">
+						<span class="elementor-button-text">Get Started</span>
+						<span class="elementor-button-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-arrow-circle-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"></path></svg>			
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+  </div>
+</section>
+
+
 		<div class="elementor-element elementor-element-dca6380 e-flex e-con-boxed e-con e-parent" data-id="dca6380" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-2f21394 e-flex e-con-boxed e-con e-child" data-id="2f21394" data-element_type="container">
