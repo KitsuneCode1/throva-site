@@ -62,7 +62,12 @@
 .wine-card{
     background-image: url("../../2024/11/Image-3.jpg");
 }
-
+#subtext{
+    font-size: 1.5rem;
+}
+.hero-subtext{
+    font-size: 2rem;
+}
 .elementor-898 .elementor-element.elementor-element-73151444:not(.elementor-motion-effects-element-type-background),
 .elementor-898 .elementor-element.elementor-element-73151444 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
     background-color:transparent;

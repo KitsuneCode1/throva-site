@@ -166,6 +166,9 @@
     margin-top: 1rem;
     text-transform: none;
 }
+#subtext{
+    font-size: 1.1rem;
+}
 
 /* Plans Section Styling Starts */
 .plans{
