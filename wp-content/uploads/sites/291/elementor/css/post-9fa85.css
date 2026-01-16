@@ -310,4 +310,11 @@
             background-size: 150%;
         }
     }
+    .hero-subtext{
+        font-size: 1rem;
+        padding: .7rem;
+    }
+    #subtext{
+        font-size: 1rem;
+    }
 }
